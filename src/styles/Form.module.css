@@ -1,0 +1,54 @@
+/* signup component */
+.signup {
+   height: 500px;
+ }
+ /* form component */
+.form {
+   display: grid;
+   grid-template-columns: 1fr;
+   padding: 2rem 0;
+ }
+ 
+ .form label {
+   margin-top: 1rem;
+ }
+ 
+ .form .button {
+   height: 44px;
+   margin-top: 2rem;
+ }
+ 
+ @media only screen and (max-width: 600px) {
+   .form {
+     grid-template-columns: 1fr;
+   }
+ }
+
+ 
+ 
+ /* button component */
+ .button {
+   background: var(--successGreen);
+   color: var(--fontPrimary);
+   padding: 0.6rem 1.2rem;
+   font-weight: 600;
+   font-size: 15px;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   border-radius: 8px;
+   cursor: pointer;
+   border: 0px;
+ }
+ 
+ .button:hover {
+   background: var(--fontPrimary);
+   color: #fff;
+ }
+ 
+ .button:hover span {
+   color: #fff;
+ }
+ 

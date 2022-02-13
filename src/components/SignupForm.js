@@ -1,6 +1,8 @@
 import classes from "../styles/Form.module.css";
+import Button from "./Button";
 import TextInput from "./TextInput";
-export default function Form() {
+
+export default function SignupForm() {
   return (
     <form className={`${classes.signup} ${classes.form}`} action="#">
       <TextInput type={"text"} placeholder={"Enter Name"} icon={"person"} />
@@ -25,11 +27,9 @@ export default function Form() {
         <span> I agree to the Terms Conditions</span>
       </label>
 
-      <div className={classes.button}>
-        <span>Submit now</span>
-      </div>
-
-      <div class="info">
+      <Button />
+      
+      <div className="info">
         Already have an account? <a href="login.html">Login</a> instead.
       </div>
     </form>

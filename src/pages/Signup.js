@@ -1,5 +1,5 @@
 import image from "../assets/images/signup.svg";
-import Form from "../components/Form";
+import SignupForm from "../components/SignupForm";
 import classes from "../styles/Illustration.module.css";
 export default function Signup() {
   return (
@@ -9,7 +9,7 @@ export default function Signup() {
         <div className={classes.illustration}>
           <img src={image} alt="Signup" />
         </div>
-        <Form />
+        <SignupForm />
       </div>
     </>
   );

@@ -1,4 +1,31 @@
 **** our poject set up***
+this project copy by learn with summit.
+at first we created pure html,css file then converted react.
+which file(html) included to position.
+html file including here only get facilities nothing else .
+css,script,image are including in html file .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

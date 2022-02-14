@@ -21,34 +21,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
-// import Answers from "../components/Answers";
-// export default function Quiz() {
-//   return (
-//     <>
-//       <h1>Pick three of your favorite Star Wars Flims</h1>
-//       <h4>Question can have multiple answers</h4>
-//       <Answers />
-//     </>
-//   );
-// }
-
-
-// import Answer from "./Ansewr";
-// export default function Answers(){
-//    return(
-//  <div class="answers">
-//    <Answer />
-//  </div>
-//    );
-// }
-
-// export default function Answer(){
-//    return(
-//       <label className="answer" for="option1">
-//         <input type="checkbox" id="option1" />
-//         A New Hope 1
-//       </label>
-//    );
-// }

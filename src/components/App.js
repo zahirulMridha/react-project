@@ -1,4 +1,4 @@
-import Login from "../pages/Login";
+import Result from "../pages/Result";
 import "../styles/App.css";
 import Layout from "./Layout";
 
@@ -8,7 +8,9 @@ function App() {
       <Layout>
         {/* <Home /> */}
         {/* <Signup /> */}
-       <Login />
+       {/* <Login /> */}
+       {/* <Quiz /> */}
+       <Result />
       </Layout>
     </div>
   );

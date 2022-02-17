@@ -5,7 +5,7 @@ export default function Signup() {
   return (
     <>
       <h1>Create an account</h1>
-      <div class="column">
+      <div className="column">
         <div className={classes.illustration}>
           <img src={image} alt="Signup" />
         </div>
@@ -14,3 +14,13 @@ export default function Signup() {
     </>
   );
 }
+
+
+
+
+
+
+
+
+
+

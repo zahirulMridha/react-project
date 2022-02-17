@@ -1,8 +1,8 @@
 import classes from "../styles/Button.module.css";
 export default function Button() {
   return (
-    <div className={classes.button}>
+    <button className={classes.button} type="submit" >
       <span>Submit now</span>
-    </div>
+    </button>
   );
 }

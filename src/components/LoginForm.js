@@ -9,6 +9,7 @@ export default function LoginForm() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState();
+  const [loading,setLoding] = useState();
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -18,10 +19,12 @@ export default function LoginForm() {
 
     // till now,i don't work with loading
     try {
+      setLoding(true);
       setError("");
       await login(email, password);
       navigate("/");
     } catch {
+      setLoding(false);
       setError("failed to login");
     }
   }
@@ -32,26 +35,26 @@ export default function LoginForm() {
       onSubmit={handelSubmit}
     >
       <TextInput
-        type={"text"}
-        placeholder={"Enter Email"}
-        icon={"alternate_email"}
+        type="text"
+        placeholder="Enter Email"
+        icon="alternate_email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <TextInput
-        type={"password"}
-        placeholder={"Enter password"}
-        icon={"lock"}
+        type="password"
+        placeholder="Enter password"
+        icon="lock"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <Button />
-
-      {error && <p className="Error">{error}</p>}
+      <Button disabled={loading} />
+      <hr />
+      {error && <p className="error">{error}</p>}
 
       <div className="info ">
-        Don't have an account your? <Link to="/login">Signup</Link> instead.
+        Don't have an account your? <Link to="/signup">Signup</Link> instead.
       </div>
     </form>
   );

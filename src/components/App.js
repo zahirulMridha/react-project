@@ -18,7 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route
-              path="/quiz"
+              path="/quiz/:ss"
               element={
                 <PublicRoute>
                   <Quiz />
@@ -26,7 +26,7 @@ function App() {
               }
             />
             <Route
-              path="/result"
+              path="/result/:ss"
               element={
                 <PublicRoute>
                   <Result />

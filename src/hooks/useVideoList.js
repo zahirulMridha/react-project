@@ -27,7 +27,7 @@ export default function useVideoList(page) {
         // where from start (items)
         startAt(""+ page),
         // last 8 items to first
-        limitToFirst(8)
+        limitToFirst(6)
       );
       try {
         setError(false);

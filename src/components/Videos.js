@@ -13,14 +13,14 @@ export default function Videos() {
       {videos.length > 0 && (
         <InfiniteScroll
           dataLength={videos.length}
-          next={() => setPage(page + 8)}
+          next={() => setPage(page + 6)}
           //whene hasmore false it will stop to scrolling
           hasMore={hasMore}
           loader="Wait please"
         >
           {videos.map((video) =>
             video.noq > 0 ? (
-              <Link to="/quiz" key={video.youtubeID}>
+              <Link to={`/quiz/${video.youtubeID}`} key={video.youtubeID}>
                 <Video
                   title={video.title}
                   id={video.youtubeID}

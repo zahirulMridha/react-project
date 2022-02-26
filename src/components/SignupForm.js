@@ -43,9 +43,9 @@ export default function SignupForm() {
       onSubmit={handleSubmit}
     >
       <TextInput
-        type={"text"}
-        placeholder={"Enter Name"}
-        icon={"person"}
+        type="text"
+        placeholder="Enter Name"
+        icon="person"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />

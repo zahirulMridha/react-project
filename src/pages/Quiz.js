@@ -1,12 +1,16 @@
 import { getDatabase, orderByKey, query, ref, set } from "firebase/database";
 import _ from "lodash";
 import { useEffect, useReducer, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Answers from "../components/Answers";
 import MiniPlayer from "../components/MiniPlayer";
 import ProgressBar from "../components/ProgressBar";
 import { useAuth } from "../context/Authcontext";
 import useQuestions from "../hooks/useQuizList";
+
+
+
+
 const initialState = null;
 const reducer = (state, action) => {
   switch (action.type) {
@@ -29,6 +33,9 @@ const reducer = (state, action) => {
 };
 
 export default function Quiz() {
+
+  
+
   const { ss } = useParams();
   const { loading, error, questions } = useQuestions(ss);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -58,7 +65,6 @@ export default function Quiz() {
       setCurrentQuestion((prevCurrent) => prevCurrent + 1);
     }
   }
-  console.log(qna);
   // handle when user clicks the prev button to get back to the previous question
   function prevQuestion() {
     if (currentQuestion >= 1 && currentQuestion <= questions.length) {
@@ -102,7 +108,8 @@ export default function Quiz() {
             progress={percentage}
             submit={submit}
           />
-          <MiniPlayer />
+          {/* state did not work after it have to fixed */}
+          <MiniPlayer ss={ss} />
         </>
       )}
     </>
